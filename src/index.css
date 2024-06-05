@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-400: #080808;
+	--primary-300: #0d0d0d;
+	--primary-200: #737373;
+	--primary-100: #e7e7e7;
+	--primary-50: #f7f7f7;
+
+	--secondary-300: #017373;
+	--secondary-200: #048c80;
+	--secondary-100: #aad9d1;
+
+	--accent: #efece6;
+
+	--gradient-bg: rgb(1, 115, 115);
+	--gradient: linear-gradient(
+		25deg,
+		rgba(1, 115, 115, 1) 0%,
+		rgba(170, 217, 209, 1) 100%
+	);
+}
+
+.body {
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--primary-400);
+}
+
+h1 {
+	@apply font-dm-sans text-[56px] leading-[106%] tracking-[-3px] m-0;
+}
+
+h2 {
+	@apply font-dm-sans text-[48px] leading-[120%] tracking-[-3px] m-0;
+}
+
+h3 {
+	@apply font-be-vietnam-pro font-bold text-[40px] leading-[120%] tracking-[-0.64px] m-0;
+}
+
+h5 {
+	@apply font-dm-sans font-bold text-[24px] leading-[140%] tracking-[-0.64px] m-0;
+}
+
+.text-large {
+	@apply font-be-vietnam-pro text-[20px] leading-[150%] m-0;
+}
+
+.text-reg {
+	@apply font-dm-sans text-[16px] leading-[150%] m-0;
+}
+
+.text-med {
+	@apply font-dm-sans text-[18px] leading-[150%] m-0;
+}
+
+.text-small {
+	@apply font-dm-sans text-[14px] leading-[140%] m-0;
+}
+
+.text-tiny {
+	@apply font-dm-sans text-[12px] leading-[150%] m-0;
+}
