@@ -1,7 +1,11 @@
-import React from "react"
+import React, { Children } from "react"
 
-const Testimonial = () => {
-	return <div>Testimonial</div>
+const Testimonial = ({ children }) => {
+	return (
+		<section className='p-12'>
+			<div className='m-auto max-w-[484px] pt-6 relative'>{children}</div>
+		</section>
+	)
 }
 
 export default Testimonial

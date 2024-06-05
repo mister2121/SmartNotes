@@ -7,11 +7,13 @@ const Hero = () => {
 		<section className='flex justify-around gap-[101px] py-[22px] pr-[188px] pl-[152px]'>
 			<div>
 				<h1 className='mt-[74px] mb-4 text-primary-100 tracking-[-2.5px]'>
-					<span className='mr-2 bg-gradient-to-r from-[#017373] to-[#aad9d1] inline-block text-transparent bg-clip-text'>
+					<span className='mr-2 font-medium bg-gradient-to-r from-[#017373] to-[#aad9d1] inline-block text-transparent bg-clip-text'>
 						Intelligent
 					</span>
 					cloud-based <br />
-					<span className='mr-2'>note-taking</span>
+					<span className='mr-2 font-medium bg-gradient-to-r from-[#017373] to-[#aad9d1] inline-block text-transparent bg-clip-text'>
+						note-taking
+					</span>
 					and <br />
 					collaboration tool
 				</h1>
