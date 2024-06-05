@@ -13,6 +13,8 @@ export default {
 			"secondary-200": "#048c80",
 			"secondary-100": "#aad9d1",
 
+			borderNav: "#048c8159",
+
 			accent: "#efece6",
 
 			"gradient-bg": "#017373",

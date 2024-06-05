@@ -1,5 +1,8 @@
 import "./App.css"
 
+//fonts
+import "../../fonts/fonts.css"
+
 // components
 import Page from "../Page/Page"
 import Header from "../Header/Header"
