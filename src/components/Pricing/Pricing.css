@@ -1,0 +1,32 @@
+.toggle-circle {
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 34px;
+	background-color: var(--primary-100);
+	transition: 0.4s ease-in-out;
+}
+
+.toggle-circle::before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 21px;
+	left: 6px;
+	bottom: 6px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: 0.4s;
+}
+
+.toggle-input:checked + .toggle-circle {
+	background-color: var(--secondary-200);
+}
+
+.toggle-input:checked + .toggle-circle:before {
+	transform: translateX(32px);
+}
