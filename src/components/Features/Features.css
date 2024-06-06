@@ -1,0 +1,38 @@
+.features-container {
+	display: grid;
+	grid-template-areas:
+		"tl tl tr tr"
+		"bl blm brm br";
+	grid-template-columns: repeat(4, 271px);
+	place-content: center;
+	gap: 20px 24px;
+}
+
+.feature.tl {
+	grid-area: tl;
+}
+
+.feature.tr {
+	grid-area: tr;
+}
+
+.feature.bl {
+	grid-area: bl;
+}
+
+.feature.blm {
+	grid-area: blm;
+}
+
+.feature.brm {
+	grid-area: brm;
+}
+
+.feature.br {
+	grid-area: br;
+}
+
+.features-background-gradient {
+	background: center no-repeat
+		url("../../assets/features/radial-gradient-features.png");
+}
