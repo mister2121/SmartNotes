@@ -1,6 +1,7 @@
 import React from "react"
 import arrow from "../../assets/colored-arrow.svg"
 import arrowRight from "../../assets/colored-arrow-right.svg"
+import "./AccordionItem.css"
 
 const AccordionItem = ({ item, setOpenQuestion, openQuestion }) => {
 	const { question, answerHeading, answer, id } = item
@@ -24,12 +25,7 @@ const AccordionItem = ({ item, setOpenQuestion, openQuestion }) => {
 					alt='Arrow icon facing top-right corner'
 				/>
 			</button>
-			<div
-				className={`bg-accent outline-0 border border-[1px] border-secondary-200 rounded-[16px] ${
-					open
-						? "visible max-h-[200px] mt-[20px] opacity-1"
-						: "hidden max-h-0 opacity-0"
-				}`}>
+			<div className={`accordion-content ${open ? "open" : ""}`}>
 				<div className='flex justify-between items-start max-w-[calc(100%-60px)] mb-[15px] mt-[20px] ml-[30px]'>
 					<p className='text-med '>{answerHeading}</p>
 					<img src={arrowRight} alt='Arrow icon facing right' />

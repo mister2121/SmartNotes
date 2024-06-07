@@ -42,6 +42,16 @@ export default {
 					to: { transform: "translateX(-50%)" },
 				},
 			},
+			transitionProperty: {
+				"max-height": "max-height",
+				visibility: "visibility",
+				margin: "margin",
+				opacity: "opacity",
+			},
+			transitionDuration: {
+				400: "400ms",
+				200: "200ms",
+			},
 		},
 	},
 	plugins: [],
