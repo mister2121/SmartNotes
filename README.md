@@ -5,3 +5,6 @@
 Technologies used:
 
 - React, Tailwind
+
+Design made by @iamhervewabo
+Find it here: [link](https://www.figma.com/community/file/1369806316522149240)
