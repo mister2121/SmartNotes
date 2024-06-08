@@ -34,7 +34,7 @@ function App() {
 					The real-time synchronization and AI-powered organization have made
 					our workflow more efficient than ever.
 				</h5>
-				<div className='flex gap-4 h-[43px] justify-center items-end text-primary-100'>
+				<div className='h-[43px] flex flex-col items-center mt-4 lg:flex-row lg:gap-4 lg:justify-center lg:items-end text-primary-100'>
 					<p className='text-reg '>Sarah Johnson</p>
 					<p className='text-reg opacity-70'>TechSavvy Solutions</p>
 				</div>
@@ -49,7 +49,7 @@ function App() {
 					The real-time synchronization and AI-powered organization have made
 					our workflow more efficient than ever.
 				</h5>
-				<div className='flex gap-4 h-[43px] justify-center items-end text-primary-100'>
+				<div className='h-[43px] flex flex-col items-center mt-4 lg:flex-row lg:gap-4 lg:justify-center lg:items-end text-primary-100'>
 					<p className='text-reg '>Sarah Johnson</p>
 					<p className='text-reg opacity-70'>TechSavvy Solutions</p>
 				</div>
@@ -64,7 +64,7 @@ function App() {
 					The real-time synchronization and AI-powered organization have made
 					our workflow more efficient than ever.
 				</h5>
-				<div className='flex gap-4 h-[43px] justify-center items-end text-primary-100'>
+				<div className='h-[43px] flex flex-col items-center mt-4 lg:flex-row lg:gap-4 lg:justify-center lg:items-end text-primary-100'>
 					<p className='text-reg '>Sarah Johnson</p>
 					<p className='text-reg opacity-70'>TechSavvy Solutions</p>
 				</div>
@@ -79,7 +79,7 @@ function App() {
 					The real-time synchronization and AI-powered organization have made
 					our workflow more efficient than ever.
 				</h5>
-				<div className='flex gap-4 h-[43px] justify-center items-end text-primary-100'>
+				<div className='h-[43px] flex flex-col items-center mt-4 lg:flex-row lg:gap-4 lg:justify-center lg:items-end text-primary-100'>
 					<p className='text-reg '>Sarah Johnson</p>
 					<p className='text-reg opacity-70'>TechSavvy Solutions</p>
 				</div>
@@ -96,7 +96,7 @@ function App() {
 					The real-time synchronization and AI-powered organization have made
 					our workflow more efficient than ever.
 				</h5>
-				<div className='flex gap-4 h-[43px] justify-center items-end text-primary-100'>
+				<div className='h-[43px] flex flex-col items-center mt-4 lg:flex-row lg:gap-4 lg:justify-center lg:items-end text-primary-100'>
 					<p className='text-reg '>Sarah Johnson</p>
 					<p className='text-reg opacity-70'>TechSavvy Solutions</p>
 				</div>

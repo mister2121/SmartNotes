@@ -11,6 +11,7 @@ const PricingTile = ({
 	bullets,
 	callToAction,
 	darkMode,
+	className,
 }) => {
 	const dark = darkMode ? "dark" : ""
 	const price =
@@ -18,10 +19,10 @@ const PricingTile = ({
 
 	return (
 		<div
-			className={`basis-[357px] flex flex-col py-[40px] px-8 outline outline-2 outline-secondary-200  rounded-[10px] ${
+			className={`w-full max-w-[357px] flex flex-col py-[40px] px-8 outline outline-2 outline-secondary-200 rounded-[10px] ${
 				dark ? "bg-transparent" : "bg-primary-100"
-			}`}>
-			{/* Plan section  */}
+			} ${className}`}>
+			{/* Plan section */}
 			<div className='flex justify-start items-center gap-y-0 gap-x-2 mb-8'>
 				<img
 					className='w-[25px] h-[25px] p-[2px] box-border border border-secondary-200 rounded-[4px]'
@@ -32,7 +33,7 @@ const PricingTile = ({
 			</div>
 
 			{/* Pricing section */}
-			<div className='flex items-end gap-[6px] mb-8'>
+			<div className='flex items-baseline gap-[6px] mb-8 flex-wrap'>
 				<h2
 					className={`leading-[0.8] ${
 						dark ? "text-primary-50" : "text-primary-300"
@@ -44,7 +45,7 @@ const PricingTile = ({
 				</p>
 			</div>
 
-			{/* Bullet section  */}
+			{/* Bullet section */}
 			<div className='flex flex-col gap-y-2 gap-x-0 mb-8'>
 				{bullets.map((bullet, i) => {
 					return (
@@ -62,7 +63,7 @@ const PricingTile = ({
 				})}
 			</div>
 
-			{/* CTA button  */}
+			{/* CTA button */}
 			<button
 				className={`h-[59px] flex justify-center items-center gap-2 mt-auto mb-2 p-0 border border-secondary-200 rounded-[8px] cursor-pointer transition-transform hover:scale-[1.01] ${
 					dark ? "bg-gradient" : ""

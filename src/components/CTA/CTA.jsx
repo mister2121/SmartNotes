@@ -6,13 +6,13 @@ import circleGradient from "../../assets/circle-gradient.png"
 const CTA = () => {
 	return (
 		<section className='py-[80px] px-0 relative'>
-			<div className='m-auto max-w-[921px] flex justify-between'>
+			<div className='m-auto max-w-[921px] flex justify-center lg:justify-between'>
 				{/* Left column of CTA  */}
-				<div className='max-w-[498px]'>
-					<h3 className='text-[#fff] mt-[42px] mb-4'>
+				<div className='flex flex-col items-center lg:items-start mx-4 max-w-[498px]'>
+					<h3 className='text-center lg:text-left text-[#fff] mt-[42px] mb-4'>
 						Unlock the Full Potential of SmartNotes
 					</h3>
-					<p className='text-accent mb-[48px]'>
+					<p className='text-center lg:text-left text-accent mb-[48px]'>
 						Ready to streamline your workflow and boost your productivity? Start
 						your free trial of SmartNotes today and experience the power of
 						smart note-taking.
@@ -31,7 +31,11 @@ const CTA = () => {
 
 				{/* Right column of CTA  */}
 				<div>
-					<img src={ctaShapes} alt='Background image of abstract shapes' />
+					<img
+						className='hidden lg:block'
+						src={ctaShapes}
+						alt='Background image of abstract shapes'
+					/>
 				</div>
 			</div>
 			<img

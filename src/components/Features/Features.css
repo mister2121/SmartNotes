@@ -1,35 +1,44 @@
 .features-container {
-	display: grid;
-	grid-template-areas:
-		"tl tl tr tr"
-		"bl blm brm br";
-	grid-template-columns: repeat(4, 271px);
-	place-content: center;
-	gap: 20px 24px;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 2rem;
+	gap: 1rem;
 }
 
-.feature.tl {
-	grid-area: tl;
-}
+@media (min-width: 1024px) {
+	.features-container {
+		display: grid;
+		grid-template-areas:
+			"tl tl tr tr"
+			"bl blm brm br";
+		grid-template-columns: repeat(4, 271px);
+		place-content: center;
+		gap: 20px 24px;
+	}
 
-.feature.tr {
-	grid-area: tr;
-}
+	.feature.tl {
+		grid-area: tl;
+	}
 
-.feature.bl {
-	grid-area: bl;
-}
+	.feature.tr {
+		grid-area: tr;
+	}
 
-.feature.blm {
-	grid-area: blm;
-}
+	.feature.bl {
+		grid-area: bl;
+	}
 
-.feature.brm {
-	grid-area: brm;
-}
+	.feature.blm {
+		grid-area: blm;
+	}
 
-.feature.br {
-	grid-area: br;
+	.feature.brm {
+		grid-area: brm;
+	}
+
+	.feature.br {
+		grid-area: br;
+	}
 }
 
 .features-background-gradient {

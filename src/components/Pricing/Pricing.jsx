@@ -13,10 +13,10 @@ const Pricing = () => {
 	}
 
 	return (
-		<section className='px-[144px] py-[96px]'>
+		<section className='px-4 py-[40px] lg:px-[144px] lg:py-[96px]'>
 			{/* Heading section */}
 			<div>
-				<h1 className='text-secondary-200 text-center mb-[17px] '>
+				<h1 className='text-secondary-200 text-center mb-[17px]'>
 					Pricing & Plans
 				</h1>
 				<p className='text-primary-100 text-center'>
@@ -45,10 +45,17 @@ const Pricing = () => {
 				</span>
 			</div>
 
-			{/* Pricing tile section  */}
-			<div className='flex justify-center gap-y-[20px] gap-x-[40px]'>
+			{/* Pricing tile section */}
+			<div className='flex flex-col items-center lg:flex-row lg:justify-center gap-y-[20px] lg:gap-x-[40px]'>
 				{pricingData.map((tile, i) => {
-					return <PricingTile key={i} {...tile} planPeriod={planPeriod} />
+					return (
+						<PricingTile
+							key={i}
+							{...tile}
+							planPeriod={planPeriod}
+							className='lg:self-stretch'
+						/>
+					)
 				})}
 			</div>
 		</section>

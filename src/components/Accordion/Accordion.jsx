@@ -6,7 +6,7 @@ const Accordion = () => {
 	const [openQuestion, setOpenQuestion] = useState(-1)
 
 	return (
-		<div className='flex flex-col max-w-[800px] m-auto'>
+		<div className='flex flex-col max-w-[800px] m-auto px-6 lg:p-0'>
 			{faqItems.map((item) => {
 				return (
 					<AccordionItem

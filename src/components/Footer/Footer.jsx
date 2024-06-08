@@ -9,7 +9,7 @@ import youtube from "../../assets/footer/youtube.svg"
 const Footer = () => {
 	return (
 		<footer className='border-t-[1px] border-secondary-200'>
-			<div className='py-[80px] px-[144px] flex justify-center gap-[160px]'>
+			<div className='py-[40px] lg:py-[80px] lg:px-[144px] flex flex-col lg:flex-row justify-center items-center gap-[50px] lg:gap-[160px]'>
 				{/* Footer content left  */}
 				<div>
 					<div className='flex items-center gap-2'>
@@ -36,7 +36,7 @@ const Footer = () => {
 					</div>
 				</div>
 				{/* Footer content right  */}
-				<div className='flex gap-[160px]'>
+				<div className='grid grid-cols-2 lg:flex lg:flex-row mt-[50px] gap-[50px] lg:gap-[160px]'>
 					<div className='w-max'>
 						<p className='text-[18px] font-bold text-accent mb-[4px]'>
 							Product
@@ -157,7 +157,7 @@ const Footer = () => {
 			</div>
 
 			{/* Footer banner at the bottom  */}
-			<div className='bg-secondary-200 py-[18px] pr-[160px] pl-[144px] flex justify-between text-primary-300'>
+			<div className='bg-secondary-200 py-6 items-center gap-6 lg:py-[18px] lg:pr-[160px] lg:pl-[144px] flex flex-col lg:flex-row justify-between text-primary-300'>
 				<p className='text-small flex items-center'>
 					@2024 SmartNotes. All Rights Reserved.
 					<a

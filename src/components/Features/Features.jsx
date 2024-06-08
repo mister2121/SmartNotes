@@ -7,13 +7,13 @@ const Features = () => {
 		<section className='py-[70px] px-0'>
 			{/* Title and description of the Features */}
 			<div className='mb-[88px] flex items-center flex-col'>
-				<h2 className='text-primary-100 mb-[14px]'>
+				<h2 className='text-center text-primary-100 mb-[14px]'>
 					Discover the Power of{" "}
 					<span className='font-medium bg-gradient-to-r from-[#017373] to-[#aad9d1] inline-block text-transparent bg-clip-text'>
 						SmartNotes
 					</span>
 				</h2>
-				<p className='text-reg text-primary-100 text-center max-w-[680px]'>
+				<p className='text-reg text-primary-100 text-center px-6 lg:m-0 lg:p-0 lg:max-w-[680px]'>
 					SmartNotes is packed with innovative features designed to
 					revolutionize the way you take notes, collaborate with others, and
 					stay organized.
@@ -21,7 +21,6 @@ const Features = () => {
 			</div>
 
 			{/* Features grid  */}
-
 			{/* features-container (grid) styled in Features.css */}
 			<div className='features-container'>
 				{features.map((obj, i) => {
@@ -42,7 +41,7 @@ const Features = () => {
 			</div>
 
 			{/* Background gradient  */}
-			<div className='features-background-gradient w-[350px] h-[350px] absolute top-[125%] left-[38%]'></div>
+			<div className='features-background-gradient w-[350px] h-[350px] absolute hidden lg:top-[125%] left-[38%]'></div>
 		</section>
 	)
 }
