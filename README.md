@@ -4,7 +4,8 @@
 
 Technologies used:
 
-- React, Tailwind
+- React, Tailwind, Framer Motion
 
 Design made by @iamhervewabo
-Find it here: [link](https://www.figma.com/community/file/1369806316522149240)
+
+- Find it here: [link](https://www.figma.com/community/file/1369806316522149240)
