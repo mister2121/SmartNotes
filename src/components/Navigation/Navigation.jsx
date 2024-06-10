@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react"
+import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import logo from "../../assets/logo.svg"
 import arrow from "../../assets/arrow.svg"
 
 const Navigation = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-	const toggleMenu = () => {
-		setIsMenuOpen(!isMenuOpen)
-	}
+	const [hidden, setHidden] = useState(false)
+	const { scrollY } = useScroll()
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -23,8 +22,28 @@ const Navigation = () => {
 		}
 	}, [])
 
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		const previous = scrollY.getPrevious()
+		if (latest > previous && latest > 150) {
+			setHidden(true)
+		} else {
+			setHidden(false)
+		}
+	})
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen)
+	}
+
 	return (
-		<nav className='relative flex justify-between items-center box-border border-borderNav border-b-[1px] px-6 py-6 lg:px-24'>
+		<motion.nav
+			variants={{
+				visible: { y: 0 },
+				hidden: { y: "-100%" },
+			}}
+			animate={hidden ? "hidden" : "visible"}
+			transition={{ duration: 0.35, ease: "easeInOut" }}
+			className='sticky top-0 z-[150] bg-primary-400 bg-opacity-50 backdrop-blur-sm flex justify-between items-center box-border border-borderNav border-b-[1px] px-6 py-6 lg:px-24'>
 			<div className='flex gap-2 items-center z-[99]'>
 				<img src={logo} alt='Logo' />
 				<h3 className='font-dm-sans text-2xl leading-[140%] text-primary-100 m-0'>
@@ -120,7 +139,7 @@ const Navigation = () => {
 					/>
 				</button>
 			</div>
-		</nav>
+		</motion.nav>
 	)
 }
 

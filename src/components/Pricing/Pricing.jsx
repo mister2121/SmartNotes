@@ -2,9 +2,16 @@ import React, { useState } from "react"
 import PricingTile from "../PricingTile/PricingTile"
 import { pricingData } from "../../utils/constants"
 import "./Pricing.css"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 const Pricing = () => {
 	const [planPeriod, setPlanPeriod] = useState("/ monthly") // OR / yearly
+
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	})
 
 	const planPeriodToggle = () => {
 		planPeriod === "/ monthly"
@@ -13,7 +20,12 @@ const Pricing = () => {
 	}
 
 	return (
-		<section className='px-4 py-[40px] lg:px-[144px] lg:py-[96px]'>
+		<motion.section
+			className='px-4 py-[40px] lg:px-[144px] lg:py-[96px]'
+			ref={ref}
+			initial={{ opacity: 0, y: 40 }}
+			animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+			transition={{ duration: 1 }}>
 			{/* Heading section */}
 			<div>
 				<h1 className='text-secondary-200 text-center mb-[17px]'>
@@ -26,9 +38,9 @@ const Pricing = () => {
 			</div>
 
 			{/* 
-				Buttons section
-				Toggling button done with Pricing.css
-			*/}
+                Buttons section
+                Toggling button done with Pricing.css
+            */}
 			<div className='my-10 mx-0 flex justify-center items-center gap-[14px]'>
 				<p className='text-med text-accent'>Monthly</p>
 				<label className='relative display-block w-[65px] h-[33px]'>
@@ -58,7 +70,7 @@ const Pricing = () => {
 					)
 				})}
 			</div>
-		</section>
+		</motion.section>
 	)
 }
 

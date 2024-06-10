@@ -1,14 +1,26 @@
 import React from "react"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 import ctaShapes from "../../assets/cta-shapes.png"
 import arrow from "../../assets/arrow.svg"
 import circleGradient from "../../assets/circle-gradient.png"
 
 const CTA = () => {
+	const { ref, inView } = useInView({
+		triggerOnce: true,
+		threshold: 0.1,
+	})
+
 	return (
 		<section className='py-[80px] px-0 relative'>
 			<div className='m-auto max-w-[921px] flex justify-center lg:justify-between'>
 				{/* Left column of CTA  */}
-				<div className='flex flex-col items-center lg:items-start mx-4 max-w-[498px]'>
+				<motion.div
+					className='flex flex-col items-center lg:items-start mx-4 max-w-[498px]'
+					ref={ref}
+					initial={{ opacity: 0, y: 40 }}
+					animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+					transition={{ duration: 1 }}>
 					<h3 className='text-center lg:text-left text-[#fff] mt-[42px] mb-4'>
 						Unlock the Full Potential of SmartNotes
 					</h3>
@@ -27,7 +39,7 @@ const CTA = () => {
 							alt='arrow icon facing topright corner'
 						/>
 					</button>
-				</div>
+				</motion.div>
 
 				{/* Right column of CTA  */}
 				<div>

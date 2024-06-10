@@ -1,10 +1,15 @@
 import React from "react"
+import { motion } from "framer-motion"
 import arrow from "../../assets/arrow.svg"
 import abstractShapes from "../../assets/abstract-shapes.png"
 
 const Hero = () => {
 	return (
-		<section className='flex flex-col lg:flex-row justify-around lg:gap-[101px] py-[22px] lg:py-[22px] lg:pr-[188px] lg:pl-[152px] px-6'>
+		<motion.section
+			className='flex flex-col lg:flex-row justify-around lg:gap-[101px] py-[22px] lg:py-[22px] lg:pr-[188px] lg:pl-[152px] px-6'
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1.5 }}>
 			<div className='flex flex-col items-center lg:items-start'>
 				<h1 className='mt-[40px] lg:mt-[74px] mb-4 text-primary-100 tracking-[-1.5px] lg:tracking-[-2.5px] text-center lg:text-left'>
 					<span className='mr-2 font-medium bg-gradient-to-r from-[#017373] to-[#aad9d1] inline-block text-transparent bg-clip-text'>
@@ -40,7 +45,7 @@ const Hero = () => {
 			<div className='hidden lg:block'>
 				<img src={abstractShapes} alt='Abstract shapes' />
 			</div>
-		</section>
+		</motion.section>
 	)
 }
 

@@ -8,7 +8,6 @@ import "../../fonts/fonts.css"
 
 // components
 import Page from "../Page/Page"
-import Header from "../Header/Header"
 import Hero from "../Hero/Hero"
 import Logos from "../Logos/Logos"
 import Testimonial from "../Testimonial/Testimonial"
@@ -24,10 +23,8 @@ import Navigation from "../Navigation/Navigation"
 function App() {
 	return (
 		<Page>
-			<Header>
-				<Navigation />
-				<Hero />
-			</Header>
+			<Navigation />
+			<Hero />
 			<Logos />
 			<Testimonial>
 				<h5 className='m-0 text-center text-accent'>
